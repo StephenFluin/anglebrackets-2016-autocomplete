@@ -1,0 +1,7 @@
+<h1>
+  {{title}}
+</h1>
+<input [(ngModel)]="query" (ngModelChange)="queryUpdate()" placeholder="search">
+<div *ngFor="let repo of (repos | async)?.items">
+  {{repo.name}}
+</div>
